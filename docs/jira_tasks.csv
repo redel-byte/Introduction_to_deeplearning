@@ -1,0 +1,16 @@
+Summary,Issue Type,Description
+Data preparation,Epic,Prepare reproducible image splits and document dataset limitations
+Record dataset source and license,Task,Add source URL and usage restrictions to docs/evaluation.md
+Review preprocessing output,Task,Check rejected files and duplicates; record class counts and split sizes
+Resolve patient independence limitation,Task,Find patient IDs if available or explicitly document their absence
+CNN experiments,Epic,Compare simple CNN experiments using validation only
+Run small memorization diagnostic,Task,Check whether 32 training examples can be learned without augmentation or dropout
+Train lower learning rate baseline,Task,Run default training notebook and save validation report
+Compare augmentation off,Task,Change only USE_AUGMENTATION and compare validation loss and macro-F1
+Compare extra convolution,Task,Change only EXTRA_CONVOLUTION relative to a recorded baseline
+Explain experiment choice,Task,Complete experiments.csv and explain selected run in evaluation.md
+Evaluation and delivery,Epic,Complete final test evaluation and demonstrate prediction
+Inspect errors and Grad-CAM,Task,Describe major class confusions and influential regions
+Evaluate selected run on test,Task,Enable final evaluation once after model selection and document metrics
+Verify Streamlit demo,Task,Try valid and invalid images and verify predicted class and class scores
+Complete project report,Task,Fill evaluation.md and record remaining limitations
