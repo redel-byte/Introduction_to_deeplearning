@@ -1,0 +1,10 @@
+# Generated datasets and trained weights are recreated locally, not published.
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/raw/
+data/processed/
+models/
+reports/
+*.pyc
+dist/

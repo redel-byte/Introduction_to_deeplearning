@@ -1,0 +1,481 @@
+﻿Work item ID,Parent,Work Type,Summary,Description,Priority,Labels,Story point estimate,Start date,Due date,Status
+1,,Epic,Fondations et gouvernance,"Cadrage du projet, risques cliniques, reproductibilité et environnement
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E01",High,neurovision-ai,,13/Oct/26,02/Nov/26,To Do
+2,,Epic,Audit et exploration des IRM,"Inventaire, qualité des images et analyse des classes
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E02",High,neurovision-ai,,14/Oct/26,02/Nov/26,To Do
+3,,Epic,Préparation et pipeline de données,"Chargement robuste, séparation, encodage, normalisation, augmentation
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E03",High,neurovision-ai,,15/Oct/26,02/Nov/26,To Do
+4,,Epic,Architecture CNN et expérimentation,"CNN multiclasses, configuration et premières expériences
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E04",High,neurovision-ai,,16/Oct/26,02/Nov/26,To Do
+5,,Epic,Entraînement et optimisation,"Suivi, régularisation et sauvegarde reproductible
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E05",High,neurovision-ai,,19/Oct/26,02/Nov/26,To Do
+6,,Epic,"Évaluation, erreurs et explicabilité","Évaluation finale, sous-groupes, confusion, Grad-CAM
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E06",High,neurovision-ai,,20/Oct/26,02/Nov/26,To Do
+7,,Epic,"Inférence, interface et livraison","Prédiction, Streamlit, tests et documentation finale
+
+Critères d’acceptation :
+Toutes les tâches de cet epic sont terminées et revues.
+
+Référence de planification : E07",High,neurovision-ai,,21/Oct/26,02/Nov/26,To Do
+8,1,Story,"Définir objectifs, périmètre et critères de succès","Objectif: Définir objectifs, périmètre et critères de succès.
+Critères d’acceptation: Documenter les 4 classes; expliciter limites et usage non clinique; définir métriques de validation et livrables.
+Dépendances internes: Aucune.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Documenter les 4 classes; expliciter limites et usage non clinique; définir métriques de validation et livrables.
+
+Référence de planification : NV-01",Highest,neurovision-ai,3,13/Oct/26,13/Oct/26,To Do
+9,1,Task,Créer le dépôt et la structure modulaire du projet,"Objectif: Créer le dépôt et la structure modulaire du projet.
+Critères d’acceptation: Arborescence, .gitignore, fichiers de configuration et scripts initiaux présents.
+Dépendances internes: NV-01.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Arborescence, .gitignore, fichiers de configuration et scripts initiaux présents.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-01
+
+Référence de planification : NV-02",High,neurovision-ai,2,13/Oct/26,13/Oct/26,To Do
+10,1,Task,"Configurer uv, dépendances et environnement Python","Objectif: Configurer uv, dépendances et environnement Python.
+Critères d’acceptation: pyproject.toml et uv.lock créés; procédure uv sync reproductible; versions TensorFlow compatibles vérifiées.
+Dépendances internes: NV-02.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+pyproject.toml et uv.lock créés; procédure uv sync reproductible; versions TensorFlow compatibles vérifiées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-02
+
+Référence de planification : NV-03",High,neurovision-ai,2,13/Oct/26,13/Oct/26,To Do
+11,1,Task,"Définir reproductibilité, seeds et configuration centralisée","Objectif: Définir reproductibilité, seeds et configuration centralisée.
+Critères d’acceptation: Seeds NumPy/TensorFlow fixées; chemins, paramètres et labels centralisés; limites de déterminisme documentées.
+Dépendances internes: NV-03.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Seeds NumPy/TensorFlow fixées; chemins, paramètres et labels centralisés; limites de déterminisme documentées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-03
+
+Référence de planification : NV-04",High,neurovision-ai,2,14/Oct/26,14/Oct/26,To Do
+12,1,Story,"Documenter provenance, licence, confidentialité et risques du dataset","Objectif: Documenter provenance, licence, confidentialité et risques du dataset.
+Critères d’acceptation: Provenance et licence vérifiées; aucune donnée identifiable publiée; biais et absence de validation médicale mentionnés.
+Dépendances internes: NV-01.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Provenance et licence vérifiées; aucune donnée identifiable publiée; biais et absence de validation médicale mentionnés.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-01
+
+Référence de planification : NV-05",Highest,neurovision-ai,3,14/Oct/26,14/Oct/26,To Do
+13,2,Story,"Inventorier dossiers, classes et fichiers IRM","Objectif: Inventorier dossiers, classes et fichiers IRM.
+Critères d’acceptation: Quatre dossiers attendus détectés; nombre de fichiers par dossier et extensions recensés.
+Dépendances internes: NV-02.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Quatre dossiers attendus détectés; nombre de fichiers par dossier et extensions recensés.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-02
+
+Référence de planification : NV-06",Highest,neurovision-ai,2,14/Oct/26,14/Oct/26,To Do
+14,2,Task,Filtrer extensions et isoler fichiers corrompus,"Objectif: Filtrer extensions et isoler fichiers corrompus.
+Critères d’acceptation: jpg/jpeg/png/bmp acceptés; exceptions capturées; fichiers exclus comptés dans un journal.
+Dépendances internes: NV-06.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+jpg/jpeg/png/bmp acceptés; exceptions capturées; fichiers exclus comptés dans un journal.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-06
+
+Référence de planification : NV-07",Highest,neurovision-ai,3,15/Oct/26,15/Oct/26,To Do
+15,2,Story,Explorer la distribution et visualiser les images,"Objectif: Explorer la distribution et visualiser les images.
+Critères d’acceptation: Diagramme de répartition et grille d’échantillons générés; déséquilibre analysé.
+Dépendances internes: NV-06.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Diagramme de répartition et grille d’échantillons générés; déséquilibre analysé.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-06
+
+Référence de planification : NV-08",High,neurovision-ai,3,15/Oct/26,15/Oct/26,To Do
+16,2,Task,Détecter doublons et risques de fuite de données,"Objectif: Détecter doublons et risques de fuite de données.
+Critères d’acceptation: Hashes et doublons proches examinés; images/études corrélées regroupées avant séparation si métadonnées disponibles.
+Dépendances internes: NV-07.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Hashes et doublons proches examinés; images/études corrélées regroupées avant séparation si métadonnées disponibles.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-07
+
+Référence de planification : NV-09",Highest,neurovision-ai,3,15/Oct/26,15/Oct/26,To Do
+17,2,Task,Produire le rapport EDA et les décisions de nettoyage,"Objectif: Produire le rapport EDA et les décisions de nettoyage.
+Critères d’acceptation: Constats, statistiques, anomalies et décisions consignés dans un rapport versionné.
+Dépendances internes: NV-07;NV-08;NV-09.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Constats, statistiques, anomalies et décisions consignés dans un rapport versionné.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-07;NV-08;NV-09
+
+Référence de planification : NV-10",High,neurovision-ai,2,16/Oct/26,16/Oct/26,To Do
+18,3,Story,Créer un loader OpenCV réutilisable et résilient,"Objectif: Créer un loader OpenCV réutilisable et résilient.
+Critères d’acceptation: Loader renvoie image et label alignés; resize 224x224; conversion couleur explicite; erreurs enregistrées.
+Dépendances internes: NV-07.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Loader renvoie image et label alignés; resize 224x224; conversion couleur explicite; erreurs enregistrées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-07
+
+Référence de planification : NV-11",Highest,neurovision-ai,5,16/Oct/26,16/Oct/26,To Do
+19,3,Task,Créer une séparation stratifiée train/validation/test,"Objectif: Créer une séparation stratifiée train/validation/test.
+Critères d’acceptation: Partitions disjointes et sauvegardées; stratification; séparation patient/étude si identifiants disponibles; test verrouillé.
+Dépendances internes: NV-09;NV-11.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Partitions disjointes et sauvegardées; stratification; séparation patient/étude si identifiants disponibles; test verrouillé.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-09;NV-11
+
+Référence de planification : NV-12",Highest,neurovision-ai,3,16/Oct/26,16/Oct/26,To Do
+20,3,Task,Implémenter encodage stable des 4 classes,"Objectif: Implémenter encodage stable des 4 classes.
+Critères d’acceptation: Mapping fixe glioma/meningioma/notumor/pituitary enregistré; labels int ou one-hot cohérents avec la loss.
+Dépendances internes: NV-12.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Mapping fixe glioma/meningioma/notumor/pituitary enregistré; labels int ou one-hot cohérents avec la loss.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-12
+
+Référence de planification : NV-13",High,neurovision-ai,2,19/Oct/26,19/Oct/26,To Do
+21,3,Task,Normaliser les pixels et comparer avant/après,"Objectif: Normaliser les pixels et comparer avant/après.
+Critères d’acceptation: Pixels en float32 [0,1]; figure de comparaison; aucune normalisation incorrecte en double.
+Dépendances internes: NV-11.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Pixels en float32 [0,1]; figure de comparaison; aucune normalisation incorrecte en double.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-11
+
+Référence de planification : NV-14",High,neurovision-ai,2,19/Oct/26,19/Oct/26,To Do
+22,3,Story,Construire un pipeline tf.data performant,"Objectif: Construire un pipeline tf.data performant.
+Critères d’acceptation: shuffle train uniquement; batch/prefetch; cache contrôlé; validation/test déterministes; métrique de débit.
+Dépendances internes: NV-12;NV-13;NV-14.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+shuffle train uniquement; batch/prefetch; cache contrôlé; validation/test déterministes; métrique de débit.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-12;NV-13;NV-14
+
+Référence de planification : NV-15",Highest,neurovision-ai,5,19/Oct/26,19/Oct/26,To Do
+23,3,Task,Définir augmentation prudente adaptée aux IRM,"Objectif: Définir augmentation prudente adaptée aux IRM.
+Critères d’acceptation: Rotations/zooms/translations légers appliqués au train uniquement; transformation et orientation justifiées.
+Dépendances internes: NV-15.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Rotations/zooms/translations légers appliqués au train uniquement; transformation et orientation justifiées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-15
+
+Référence de planification : NV-16",High,neurovision-ai,3,20/Oct/26,20/Oct/26,To Do
+24,3,Task,Analyser le déséquilibre et pondérer les classes si besoin,"Objectif: Analyser le déséquilibre et pondérer les classes si besoin.
+Critères d’acceptation: Distribution calculée sur train seulement; class_weight ou autre stratégie justifiée et documentée.
+Dépendances internes: NV-08;NV-12.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Distribution calculée sur train seulement; class_weight ou autre stratégie justifiée et documentée.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-08;NV-12
+
+Référence de planification : NV-17",Medium,neurovision-ai,2,20/Oct/26,20/Oct/26,To Do
+25,3,Task,"Tester intégrité shapes, labels et partitions","Objectif: Tester intégrité shapes, labels et partitions.
+Critères d’acceptation: Tests automatiques validant shapes, 4 classes, absence de chevauchement et erreurs de lecture.
+Dépendances internes: NV-15;NV-16.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Tests automatiques validant shapes, 4 classes, absence de chevauchement et erreurs de lecture.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-15;NV-16
+
+Référence de planification : NV-18",Highest,neurovision-ai,3,20/Oct/26,20/Oct/26,To Do
+26,4,Story,Concevoir le CNN de base et justifier les couches,"Objectif: Concevoir le CNN de base et justifier les couches.
+Critères d’acceptation: Conv2D/MaxPooling2D/Dropout/Dense définies; sortie softmax à 4 unités; schéma et justification.
+Dépendances internes: NV-15.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Conv2D/MaxPooling2D/Dropout/Dense définies; sortie softmax à 4 unités; schéma et justification.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-15
+
+Référence de planification : NV-19",Highest,neurovision-ai,5,21/Oct/26,21/Oct/26,To Do
+27,4,Task,"Choisir activation, loss, métriques et optimiseur","Objectif: Choisir activation, loss, métriques et optimiseur.
+Critères d’acceptation: ReLU, softmax, Adam et loss compatibles avec format des labels; accuracy et métriques complémentaires configurées.
+Dépendances internes: NV-19.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+ReLU, softmax, Adam et loss compatibles avec format des labels; accuracy et métriques complémentaires configurées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-19
+
+Référence de planification : NV-20",Highest,neurovision-ai,2,21/Oct/26,21/Oct/26,To Do
+28,4,Task,Générer model.summary et visualisation d’architecture,"Objectif: Générer model.summary et visualisation d’architecture.
+Critères d’acceptation: summary et plot_model sauvegardés; dimensions et nombre de paramètres expliqués.
+Dépendances internes: NV-19.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+summary et plot_model sauvegardés; dimensions et nombre de paramètres expliqués.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-19
+
+Référence de planification : NV-21",Medium,neurovision-ai,2,21/Oct/26,21/Oct/26,To Do
+29,4,Story,Définir une configuration expérimentale de référence,"Objectif: Définir une configuration expérimentale de référence.
+Critères d’acceptation: Learning rate, batch size, epochs, seed et identifiant d’essai enregistrés; baseline lancée.
+Dépendances internes: NV-20.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Learning rate, batch size, epochs, seed et identifiant d’essai enregistrés; baseline lancée.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-20
+
+Référence de planification : NV-22",High,neurovision-ai,3,22/Oct/26,22/Oct/26,To Do
+30,5,Story,Entraîner le CNN avec validation et suivi du temps,"Objectif: Entraîner le CNN avec validation et suivi du temps.
+Critères d’acceptation: model.fit exécuté; temps total mesuré; history et configuration sauvegardés; test non utilisé.
+Dépendances internes: NV-22;NV-18.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+model.fit exécuté; temps total mesuré; history et configuration sauvegardés; test non utilisé.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-22;NV-18
+
+Référence de planification : NV-23",Highest,neurovision-ai,5,22/Oct/26,22/Oct/26,To Do
+31,5,Task,Configurer ModelCheckpoint et BackupAndRestore,"Objectif: Configurer ModelCheckpoint et BackupAndRestore.
+Critères d’acceptation: Meilleur modèle selon val_loss sauvegardé en .keras; reprise après interruption testée.
+Dépendances internes: NV-23.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Meilleur modèle selon val_loss sauvegardé en .keras; reprise après interruption testée.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-23
+
+Référence de planification : NV-24",Highest,neurovision-ai,3,22/Oct/26,22/Oct/26,To Do
+32,5,Task,Configurer EarlyStopping et régularisation,"Objectif: Configurer EarlyStopping et régularisation.
+Critères d’acceptation: EarlyStopping restore_best_weights configuré; dropout/augmentation contrôlés; arrêt motivé.
+Dépendances internes: NV-23.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+EarlyStopping restore_best_weights configuré; dropout/augmentation contrôlés; arrêt motivé.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-23
+
+Référence de planification : NV-25",High,neurovision-ai,3,23/Oct/26,23/Oct/26,To Do
+33,5,Task,Tracer et commenter courbes accuracy/loss,"Objectif: Tracer et commenter courbes accuracy/loss.
+Critères d’acceptation: Courbes train/validation produites; sous/surapprentissage et écart train-val discutés.
+Dépendances internes: NV-23.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Courbes train/validation produites; sous/surapprentissage et écart train-val discutés.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-23
+
+Référence de planification : NV-26",High,neurovision-ai,2,23/Oct/26,23/Oct/26,To Do
+34,5,Story,Comparer expériences sans toucher au test,"Objectif: Comparer expériences sans toucher au test.
+Critères d’acceptation: Deux ou plus configurations comparées sur validation; résultats tabulés; choix du modèle documenté.
+Dépendances internes: NV-24;NV-25;NV-26.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Deux ou plus configurations comparées sur validation; résultats tabulés; choix du modèle documenté.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-24;NV-25;NV-26
+
+Référence de planification : NV-27",High,neurovision-ai,5,26/Oct/26,26/Oct/26,To Do
+35,5,Task,Figer meilleur modèle et artefacts de prédiction,"Objectif: Figer meilleur modèle et artefacts de prédiction.
+Critères d’acceptation: Modèle .keras et class_names.json exportés; chargement indépendant vérifié.
+Dépendances internes: NV-27.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Modèle .keras et class_names.json exportés; chargement indépendant vérifié.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-27
+
+Référence de planification : NV-28",Highest,neurovision-ai,2,26/Oct/26,26/Oct/26,To Do
+36,6,Story,Évaluer une fois le modèle final sur le test,"Objectif: Évaluer une fois le modèle final sur le test.
+Critères d’acceptation: Test utilisé après sélection et gel; accuracy, macro-F1, précision/rappel par classe calculés.
+Dépendances internes: NV-28.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Test utilisé après sélection et gel; accuracy, macro-F1, précision/rappel par classe calculés.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-28
+
+Référence de planification : NV-29",Highest,neurovision-ai,5,27/Oct/26,27/Oct/26,To Do
+37,6,Task,Créer matrice de confusion et classification_report,"Objectif: Créer matrice de confusion et classification_report.
+Critères d’acceptation: Matrice de confusion en valeurs absolues et normalisées; rapport sauvegardé; ordres des labels cohérents.
+Dépendances internes: NV-29.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Matrice de confusion en valeurs absolues et normalisées; rapport sauvegardé; ordres des labels cohérents.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-29
+
+Référence de planification : NV-30",Highest,neurovision-ai,3,27/Oct/26,27/Oct/26,To Do
+38,6,Story,Auditer prédictions correctes et erreurs,"Objectif: Auditer prédictions correctes et erreurs.
+Critères d’acceptation: Exemples corrects/incorrects anonymisés; classes confondues et erreurs fréquentes discutées.
+Dépendances internes: NV-30.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Exemples corrects/incorrects anonymisés; classes confondues et erreurs fréquentes discutées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-30
+
+Référence de planification : NV-31",High,neurovision-ai,3,28/Oct/26,28/Oct/26,To Do
+39,6,Story,Créer des explications visuelles avec Grad-CAM,"Objectif: Créer des explications visuelles avec Grad-CAM.
+Critères d’acceptation: Heatmaps par image visibles; méthode, couche cible et limites interprétatives documentées.
+Dépendances internes: NV-28.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Heatmaps par image visibles; méthode, couche cible et limites interprétatives documentées.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-28
+
+Référence de planification : NV-32",High,neurovision-ai,5,28/Oct/26,28/Oct/26,To Do
+40,6,Task,"Documenter incertitude, biais et limites cliniques","Objectif: Documenter incertitude, biais et limites cliniques.
+Critères d’acceptation: Les probabilités ne sont pas présentées comme fiabilité clinique; limites hors distribution et revue humaine explicites.
+Dépendances internes: NV-29;NV-31;NV-32.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Les probabilités ne sont pas présentées comme fiabilité clinique; limites hors distribution et revue humaine explicites.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-29;NV-31;NV-32
+
+Référence de planification : NV-33",Highest,neurovision-ai,3,28/Oct/26,28/Oct/26,To Do
+41,7,Story,Implémenter predict_image avec gestion des entrées,"Objectif: Implémenter predict_image avec gestion des entrées.
+Critères d’acceptation: Image valide prédite avec labels stables; erreurs extension/corruption gérées; même preprocessing que train.
+Dépendances internes: NV-28.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Image valide prédite avec labels stables; erreurs extension/corruption gérées; même preprocessing que train.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-28
+
+Référence de planification : NV-34",Highest,neurovision-ai,5,29/Oct/26,29/Oct/26,To Do
+42,7,Story,Développer une interface Streamlit de démonstration,"Objectif: Développer une interface Streamlit de démonstration.
+Critères d’acceptation: Upload image, aperçu, classe, scores et avertissement médical visibles; aucun diagnostic affirmé.
+Dépendances internes: NV-34.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Upload image, aperçu, classe, scores et avertissement médical visibles; aucun diagnostic affirmé.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-34
+
+Référence de planification : NV-35",High,neurovision-ai,5,29/Oct/26,29/Oct/26,To Do
+43,7,Task,Intégrer Grad-CAM à la démonstration,"Objectif: Intégrer Grad-CAM à la démonstration.
+Critères d’acceptation: Heatmap affichée avec note sur les limites; dégradation gracieuse si explication indisponible.
+Dépendances internes: NV-32;NV-35.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Heatmap affichée avec note sur les limites; dégradation gracieuse si explication indisponible.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-32;NV-35
+
+Référence de planification : NV-36",Medium,neurovision-ai,3,30/Oct/26,30/Oct/26,To Do
+44,7,Task,"Tester loader, prédiction, UI et cas invalides","Objectif: Tester loader, prédiction, UI et cas invalides.
+Critères d’acceptation: Tests smoke et d’intégration; formats et fichier corrompu couverts; commandes reproductibles.
+Dépendances internes: NV-34;NV-35.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Tests smoke et d’intégration; formats et fichier corrompu couverts; commandes reproductibles.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-34;NV-35
+
+Référence de planification : NV-37",Highest,neurovision-ai,3,30/Oct/26,30/Oct/26,To Do
+45,7,Story,Rédiger README et documentation de reproduction,"Objectif: Rédiger README et documentation de reproduction.
+Critères d’acceptation: Installation, arborescence, données, entraînement, évaluation et lancement Streamlit expliqués.
+Dépendances internes: NV-02;NV-28;NV-35.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Installation, arborescence, données, entraînement, évaluation et lancement Streamlit expliqués.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-02;NV-28;NV-35
+
+Référence de planification : NV-38",High,neurovision-ai,3,30/Oct/26,30/Oct/26,To Do
+46,7,Task,"Réaliser démonstration, revue finale et remise","Objectif: Réaliser démonstration, revue finale et remise.
+Critères d’acceptation: Démo exécutable; artefacts et limites présentés; livrables vérifiés et critères de réussite revus.
+Dépendances internes: NV-29;NV-33;NV-36;NV-37;NV-38.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Démo exécutable; artefacts et limites présentés; livrables vérifiés et critères de réussite revus.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-29;NV-33;NV-36;NV-37;NV-38
+
+Référence de planification : NV-39",Highest,neurovision-ai,3,02/Nov/26,02/Nov/26,To Do
+47,7,Task,Vérifier protection des données et livrables Git,"Objectif: Vérifier protection des données et livrables Git.
+Critères d’acceptation: Données IRM privées et checkpoints volumineux exclus de Git; aucune donnée patient dans logs ou captures.
+Dépendances internes: NV-38.
+Livrable: code, rapport ou preuve de validation versionné.
+
+Critères d’acceptation :
+Données IRM privées et checkpoints volumineux exclus de Git; aucune donnée patient dans logs ou captures.
+
+Dépendances (références de planification, liens Jira à créer ensuite) : NV-38
+
+Référence de planification : NV-40",Highest,neurovision-ai,2,02/Nov/26,02/Nov/26,To Do

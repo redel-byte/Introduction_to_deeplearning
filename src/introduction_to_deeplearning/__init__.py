@@ -1,2 +1,2 @@
 def main() -> None:
-    print("Hello from introduction-to-deeplearning!")
+    print("Start with notebooks/training.ipynb. See README.md for setup and the Streamlit demo.")

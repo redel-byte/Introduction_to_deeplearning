@@ -1,0 +1,120 @@
+Project context
+Contexte du projet
+NeuroVision AI est une solution de vision par ordinateur dédiée à l'aide au diagnostic des tumeurs cérébrales. Elle analyse des images IRM et les classe automatiquement en quatre catégories : gliome, méningiome, tumeur de l'hypophyse et absence de tumeur. Le projet repose sur un réseau de neurones convolutif (CNN) développé avec TensorFlow et Keras, sur OpenCV pour le prétraitement des images et sur une interface interactive permettant de tester les prédictions du modèle.
+
+L'interprétation d'une IRM cérébrale demande du temps et une expertise spécialisée, alors que le nombre d'examens à analyser ne cesse d'augmenter. Un outil d'aide à la décision peut accélérer le tri des examens et offrir un second avis aux médecins, sans jamais se substituer à eux. L'objectif du projet est de développer une application intelligente capable de :
+
+Analyser et classer les images IRM du cerveau selon 4 catégories (glioma, meningioma, pituitary, notumor),
+Assister les médecins dans l'interprétation rapide et fiable des résultats,
+Optimiser le temps de diagnostic tout en réduisant les erreurs humaines,
+Expliquer les décisions du modèle (IA explicable).
+Objectifs pédagogiques
+À la fin du projet, l'apprenant sait :
+
+préparer et analyser un jeu de données d'images ;
+mettre en place un chargement de données efficace et autonome ;
+comprendre l'effet de chaque transformation appliquée aux images ;
+concevoir, entraîner et évaluer un CNN de classification multi-classes avec Keras ;
+analyser les erreurs et interpréter les décisions du modèle ;
+livrer un projet reproductible, documenté et planifié.
+Dataset
+Le dataset est fourni sous forme de 4 dossiers, un par classe (le nom du dossier est le nom de la classe) :
+
+data/raw/
+
+├── glioma/
+├── meningioma/
+├── notumor/
+└── pituitary/
+Travail demandé
+Découverte et préparation des données
+Importer les bibliothèques nécessaires et parcourir les dossiers du dataset (le nom d'un dossier correspond à une classe).
+Vérifier les extensions des fichiers (jpeg, jpg, bmp, png) et écarter ceux qui ne correspondent pas.
+Gérer les images illisibles ou corrompues avec un bloc try-except, sans interrompre le chargement.
+Charger les images dans une liste et leurs étiquettes dans une autre, en gardant le même indice pour chaque image et son label, puis les mélanger.
+Redimensionner les images à une taille fixe (ex. 224×224) à l'aide de la bibliothèque OpenCV.
+Convertir les listes d'images et d'étiquettes en tableaux NumPy pour les rendre exploitables par le modèle.
+Encapsuler le chargement dans une fonction ou un module réutilisable, et l'accélérer (ex. mise en cache et préchargement avec tf.data).
+Afficher la répartition des images par classe (ex. diagramme avec Matplotlib ou Seaborn) et un échantillon d'images pour chaque classe.
+Vérifier l'équilibre entre les classes et appliquer un rééquilibrage si nécessaire (ex. class_weight ou augmentation ciblée).
+Transformer les étiquettes textuelles en valeurs numériques (ex. LabelEncoder, puis to_categorical).
+Normaliser les valeurs des pixels dans la plage [0, 1] et comparer une image avant et après pour comprendre l'effet de la transformation.
+Appliquer une augmentation de données adaptée aux IRM (ex. rotations légères, zoom, décalages avec les couches d'augmentation de Keras , juste sur data entrainnement).
+Diviser les données en ensembles d’entraînement et de test.
+Conception du modèle
+Définir une architecture CNN (ex. blocs Conv2D + MaxPooling2D, avec Dropout et couches Dense) et justifier tes choix.
+Choisir les fonctions d'activation des couches cachées et de la couche de sortie, ainsi qu'une fonction de perte adaptée à une classification en 4 classes.
+Compiler le modèle avec un optimiseur adapté (ex. Adam).
+Vérifier l'architecture avec model.summary() et plot_model(), et comprendre le nombre de paramètres.
+Déterminer les hyperparamètres (taux d'apprentissage, nombre d'époques, taille de batch).
+Mesurer la durée de l'entraînement avec la bibliothèque time.
+Entraînement et suivi
+Lancer l'entraînement avec model.fit(), en fournissant les données de validation.
+Sauvegarder automatiquement le meilleur modèle (ex. callback ModelCheckpoint) et pouvoir reprendre après une interruption (ex. BackupAndRestore).
+Limiter le surapprentissage (ex. EarlyStopping, Dropout, augmentation de données).
+Visualiser les courbes d'apprentissage (accuracy / loss) et les interpréter.
+Évaluation et analyse des erreurs
+Évaluer les performances sur l'ensemble de test, utilisé une seule fois.
+Générer une matrice de confusion et un rapport de classification (ex. confusionmatrix et classificationreport de scikit-learn).
+Afficher des exemples de prédictions correctes et incorrectes, et analyser les confusions entre classes.
+Déploiement / utilisation
+Créer une fonction predict_image(path) pour tester une image et obtenir la classe prédite, en gérant les entrées invalides.
+Sauvegarder le modèle entraîné (ex. format .keras ou .h5).
+Développer une interface avec Streamlit pour tester les prédictions.
+Documentation et reproductibilité
+Ajouter des commentaires dans le code (Markdown si en notebook) pour expliquer chaque étape.
+Fournir un fichier README.md contenant : description du projet, structure des fichiers, instructions pour l'exécuter.
+Planifier les tâches dans Jira sous forme d'Epics et de tickets.
+Un guide de réalisation (Roadmap) t'aide à organiser ton travail et ta documentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 13. Commencer ensuite l'entraînement
+
+Dans cette session, `train_ds`, `val_ds`, `test_ds` et `class_weights` sont prêts.
+Le futur CNN attend `(224, 224, 1)` en entrée et quatre probabilités en sortie.
+Avec nos labels one-hot, utiliser `categorical_crossentropy`.
+Passer `train_ds` et `val_ds` à l'entraînement, puis réserver `test_ds` pour
+l'évaluation finale après le choix du modèle. Les poids se passent avec
+`class_weight=class_weights` dans `model.fit`.
+
+Dans un **autre notebook**, commencer par recharger les fichiers :
+
+```python
+from pathlib import Path
+import json
+import numpy as np
+
+# Depuis notebooks ; sur Colab, utiliser le chemin OUTPUT_PATH affiché plus haut.
+processed = Path('../data/processed')
+X_train = np.load(processed / 'X_train.npy')
+X_val = np.load(processed / 'X_val.npy')
+X_test = np.load(processed / 'X_test.npy')
+y_train = np.load(processed / 'y_train.npy')
+y_val = np.load(processed / 'y_val.npy')
+y_test = np.load(processed / 'y_test.npy')
+with open(processed / 'preprocessing_config.json', encoding='utf-8') as file:
+    config = json.load(file)
+class_names = config['class_names']
+class_weights = {}
+for index, weight in config['class_weights'].items():
+    class_weights[int(index)] = weight  # JSON stocke les clés comme du texte.
+```
+
+Puis reprendre les imports TensorFlow et les définitions des sections 8, 9 et 11
+(`normalize_batch`, `data_augmentation`, `augment_batch`, `make_dataset`), avec
+`SEED` et `BATCH_SIZE` depuis `config`, pour recréer les trois datasets.
+Ne pas ajouter une seconde normalisation dans le CNN : les batches sont déjà dans `[0, 1]`.
+Ne pas augmenter une seconde fois les images dans le modèle : `train_ds` le fait déjà.
+
+**Prochaine étape : concevoir le CNN dans un notebook d'entraînement.**
